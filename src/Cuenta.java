@@ -6,9 +6,9 @@ public class Cuenta {
     double saldo;
     int agencia;
     int numero;
-    String titutal;
+    Cliente titular; // Para hacer referencia de un objeto Cliente con la Cuenta
     
-    //Metodo que no retorna "void"
+    //Metodo que no retorna, "void"
     public void depositar(double valor){ //"saldo", is parameter
         this.saldo = this.saldo + valor;
     }
