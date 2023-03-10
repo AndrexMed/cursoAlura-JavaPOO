@@ -7,4 +7,8 @@ public class Cuenta {
     int agencia;
     int numero;
     String titutal;
+    
+    void depositar(double valor){
+        saldo = saldo + valor;
+    }
 }
