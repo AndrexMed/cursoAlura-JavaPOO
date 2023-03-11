@@ -4,10 +4,14 @@
  */
 public class TestReferencia3 {
     public static void main(String[] args) {
-        Cuenta cuentaJulieta = new Cuenta();
-        Cliente cliente = new Cliente();
-        cuentaJulieta.titular = cliente;
-        // cuentaJulieta.titular.nombre = "Julieta"; //Esta linea generaria un Exception... Ya que no habia instanciado con cliente...
+        
+        Cuenta cuentaJulieta = new Cuenta(); // Al instanciar una cuenta tambien referencia al objeto cliente
+        
+       // Cliente cliente = new Cliente(); //Forma de referenciar manualmente
+       // cuentaJulieta.titular = cliente;  //Forma de referenciar manualmente
+       
+       // cuentaJulieta.titular = new Cliente(); // Forma de referenciar mas directamente
+      //  cuentaJulieta.titular.nombre = "julieta"; //En esta si imprimiria el objeto...
         
         System.out.println(cuentaJulieta.titular.nombre); //Su valor por defecto seria null
     }
