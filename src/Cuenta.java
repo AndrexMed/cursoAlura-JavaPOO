@@ -3,7 +3,7 @@
  * @author giova
  */
 public class Cuenta {
-    double saldo;
+    private double saldo;
     int agencia;
     int numero;
     Cliente titular = new Cliente(); // Para hacer referencia de un objeto Cliente con la Cuenta -- Referencia directa
