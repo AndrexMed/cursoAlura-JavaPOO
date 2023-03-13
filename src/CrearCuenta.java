@@ -5,15 +5,15 @@
 public class CrearCuenta {
     public static void main(String[] args) {
         Cuenta primeraCuenta = new Cuenta();
-        primeraCuenta.saldo = 400;
+        primeraCuenta.depositar(400);
         
-        System.out.println(primeraCuenta.saldo);
+        System.out.println(primeraCuenta.getSaldo());
         
          Cuenta segundaCuenta = new Cuenta();
-         segundaCuenta.saldo = 400;
+         segundaCuenta.depositar(400);
          
-         System.out.println(segundaCuenta.saldo);
-         System.out.println(primeraCuenta.saldo);
+         System.out.println(segundaCuenta.getSaldo());
+         System.out.println(primeraCuenta.getSaldo());
          
          if (primeraCuenta == segundaCuenta) {
             System.out.println("Son el mismo objeto");

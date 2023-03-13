@@ -7,6 +7,7 @@ public class Cliente {
     private String documento;
     private String telefono;
 
+    //En los metodos puedo agregar condiciones o reglas del negocio....
     public String getNombre() {
         return nombre;
     }

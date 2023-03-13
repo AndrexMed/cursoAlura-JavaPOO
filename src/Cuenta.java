@@ -6,7 +6,7 @@ public class Cuenta {
     private double saldo; //Encapsulamiento
     private int agencia; //Encapsulando...
     private int numero;
-    Cliente titular = new Cliente(); // Para hacer referencia de un objeto Cliente con la Cuenta -- Referencia directa
+    private Cliente titular = new Cliente(); // Para hacer referencia de un objeto Cliente con la Cuenta -- Referencia directa
     
     //Metodo que no retorna, "void"
     public void depositar(double valor){ //"saldo", is parameter
@@ -51,6 +51,11 @@ public class Cuenta {
     public void setTitular(Cliente titular) {
         this.titular = titular;
     }
+
+    public Cliente getTitular() {
+        return titular;
+    }
+    
     
     
 }
