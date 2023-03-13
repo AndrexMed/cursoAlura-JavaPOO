@@ -3,7 +3,7 @@
  * @author giova
  */
 public class Cuenta {
-    private double saldo;
+    private double saldo; //Encapsulamiento
     int agencia;
     int numero;
     Cliente titular = new Cliente(); // Para hacer referencia de un objeto Cliente con la Cuenta -- Referencia directa
@@ -30,5 +30,9 @@ public class Cuenta {
             return true;
         }
         return false;
+    }
+    
+    public double ObtenerSaldo(){ //Getter
+        return this.saldo;
     }
 }
