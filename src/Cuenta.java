@@ -4,7 +4,7 @@
  */
 public class Cuenta {
     private double saldo; //Encapsulamiento
-    int agencia;
+    private int agencia; //Encapsulando...
     int numero;
     Cliente titular = new Cliente(); // Para hacer referencia de un objeto Cliente con la Cuenta -- Referencia directa
     
@@ -32,7 +32,21 @@ public class Cuenta {
         return false;
     }
     
-    public double ObtenerSaldo(){ //Getter
+    public double getSaldo(){ //Getter - por convencion se usa la palabra "get"
         return this.saldo;
     }
+    
+    public void setAgencia(int agencia){ //"this.agencia", hace refencia ala que esta afuera, mientras que la otra "agencia" hace referencia al argumento que recibe...
+        if (agencia > 0) {
+            this.agencia = agencia;
+        }else{
+            System.out.println("No esta permitido valores negativos");
+        }
+    }
+
+    public int getAgencia() {
+        return agencia;
+    }
+    
+    
 }
