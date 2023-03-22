@@ -8,6 +8,11 @@ public class Cuenta {
     private int numero;
     private Cliente titular = new Cliente(); // Para hacer referencia de un objeto Cliente con la Cuenta -- Referencia directa
     
+    //Se ejecuta implicitamente
+    public Cuenta(){
+        System.out.println("Aqui se crea una nueva cuenta");
+    }
+    
     //Metodo que no retorna, "void"
     public void depositar(double valor){ //"saldo", is parameter
         this.saldo = this.saldo + valor;
