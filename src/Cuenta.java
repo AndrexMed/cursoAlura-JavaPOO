@@ -66,6 +66,10 @@ public class Cuenta {
         return titular;
     }
     
+    public static int getcountCuentas(){   
+        //return this.countCuentas; //No se puede usar this ya que el this hace referencia a las instancias, y este atributo es estatico
+        return Cuenta.countCuentas;
+    }
     
     
 }
