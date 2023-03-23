@@ -9,6 +9,7 @@
  */
 public class PruebaConstructor {
     public static void main(String[] args) {
+        Cuenta cuentados = new Cuenta(6); //Esta cuenta se crea para probar el contador de cuentas (variable estatica)
         Cuenta cuenta = new Cuenta(5); // Al personalizar el constructor "por defecto", obligamos al user a ingresarle un numero de agencia mayor que cero
         //cuenta.depositar(500);
         //System.out.println(cuenta.getSaldo());

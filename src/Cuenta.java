@@ -8,15 +8,20 @@ public class Cuenta {
     private int numero;
     private Cliente titular = new Cliente(); // Para hacer referencia de un objeto Cliente con la Cuenta -- Referencia directa
     
+    
+    private static int countCuentas = 0; //Variable statica (Que no va hacer parte de la instancia sino de la clase)contador de cuentas...
+    
     //Se ejecuta implicitamente -- Aqui personalizamos el constructor que viene por defecto...
     public Cuenta(int agencia){  // Aqui obligamos que al crear una instacia de cuenta, haya que asignarle un numero para la agencia por medio del constructor
+        
         if (agencia <= 0) { 
             System.out.println("Error! No se permite valor menor que 0");
             this.agencia = 1; // El this hace refencia a la agencia que esta arriba
         }else{
             this.agencia = agencia; // El this hace refencia a la agencia que esta arriba
         }
-        System.out.println("Aqui se crea una nueva cuenta");
+        countCuentas++; //Contador de cuentas...
+        System.out.println("Aqui se crea una nueva cuenta: Total de cuentas: "+countCuentas);
     }
     
     //Metodo que no retorna, "void"
