@@ -9,10 +9,10 @@
  */
 public class PruebaConstructor {
     public static void main(String[] args) {
-        Cuenta cuenta = new Cuenta();
-        cuenta.depositar(500);
-        System.out.println(cuenta.getSaldo());
-        cuenta.setAgencia(-5);
+        Cuenta cuenta = new Cuenta(5); // Al personalizar el constructor "por defecto", obligamos al user a ingresarle un numero de agencia mayor que cero
+        //cuenta.depositar(500);
+        //System.out.println(cuenta.getSaldo());
+        //cuenta.setAgencia(-5);
         System.out.println(cuenta.getAgencia());
     }
 }

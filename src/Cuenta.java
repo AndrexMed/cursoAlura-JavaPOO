@@ -8,8 +8,14 @@ public class Cuenta {
     private int numero;
     private Cliente titular = new Cliente(); // Para hacer referencia de un objeto Cliente con la Cuenta -- Referencia directa
     
-    //Se ejecuta implicitamente
-    public Cuenta(){
+    //Se ejecuta implicitamente -- Aqui personalizamos el constructor que viene por defecto...
+    public Cuenta(int agencia){  // Aqui obligamos que al crear una instacia de cuenta, haya que asignarle un numero para la agencia por medio del constructor
+        if (agencia <= 0) { 
+            System.out.println("Error! No se permite valor menor que 0");
+            this.agencia = 1; // El this hace refencia a la agencia que esta arriba
+        }else{
+            this.agencia = agencia; // El this hace refencia a la agencia que esta arriba
+        }
         System.out.println("Aqui se crea una nueva cuenta");
     }
     
@@ -41,13 +47,7 @@ public class Cuenta {
         return this.saldo;
     }
     
-    public void setAgencia(int agencia){ //"this.agencia", hace refencia ala que esta afuera, mientras que la otra "agencia" hace referencia al argumento que recibe...
-        if (agencia > 0) {
-            this.agencia = agencia;
-        }else{
-            System.out.println("No esta permitido valores negativos");
-        }
-    }
+
 
     public int getAgencia() {
         return agencia;
